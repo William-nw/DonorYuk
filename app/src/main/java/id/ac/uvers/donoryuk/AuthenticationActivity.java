@@ -7,12 +7,12 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class Login extends AppCompatActivity {
+public class AuthenticationActivity extends AppCompatActivity {
 
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
-    TabLayout tabLayout;
-    ViewPager viewPager;
-
+    private AuthTabAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,15 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         tabLayout = findViewById(R.id.tab_layout);
-        viewPager = findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.auth_view_pager);
 
         tabLayout.addTab(tabLayout.newTab().setText("Login"));
         tabLayout.addTab(tabLayout.newTab().setText("Register"));
         tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
 
-        final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(), this, tabLayout.getTabCount());
+        adapter = new AuthTabAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
