@@ -79,7 +79,7 @@
         >
 
         <EditText
-            android:id="@+id/gol_darah"
+            android:id="@+id/blood"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
