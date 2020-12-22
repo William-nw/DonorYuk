@@ -58,6 +58,8 @@ public class LoginTabFragment extends Fragment implements View.OnClickListener {
             public void onResponse(@NonNull Call<UserResponse> call, @NonNull Response<UserResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     Intent intent = new Intent(getContext(), ReqDarahActivity.class);
+                    SessionPreference session = new SessionPreference(Objects.requireNonNull(getContext()));
+                    session.setUser(response.body().getUser());
                     Objects.requireNonNull(getContext()).startActivity(intent);
                 } else {
                     Log.d("data", "gagal");

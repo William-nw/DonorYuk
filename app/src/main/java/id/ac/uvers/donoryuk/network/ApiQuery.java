@@ -33,4 +33,17 @@ public interface ApiQuery {
         @Field("username") String username,
         @Field("password") String password
     );
+
+    @FormUrlEncoded
+    @POST("WFSJoEPUTcI4WkX7x39OkUZ7sZSpzlTQ/update-user")
+    Call<UserResponse> update(
+            @Field("id") int id,
+            @Field("nama") String name,
+            @Field("golongan_darah") String blood,
+            @Field("rhesus") String rhesus,
+            @Field("lokasi") String location,
+            @Field("no_hp") String phone,
+            @Field("gender") String gender,
+            @Field("status_donor") String status
+    );
 }

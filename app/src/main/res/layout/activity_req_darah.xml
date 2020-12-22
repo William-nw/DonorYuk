@@ -31,30 +31,35 @@
         app:layout_constraintVertical_bias="1">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
+            android:id="@+id/darah_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Bantuan" />-->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bantuan" />
 
-<!--            <com.google.android.material.tabs.TabItem-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Data Diri" />-->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Diri" />
         </com.google.android.material.tabs.TabLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_users"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/darah_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-            tools:listitem="@layout/holder" />
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+            app:layout_constraintVertical_bias="0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

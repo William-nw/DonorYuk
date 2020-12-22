@@ -1,7 +1,6 @@
 package id.ac.uvers.donoryuk.adapters;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,6 @@ public class DarahAdapter extends RecyclerView.Adapter<DarahAdapter.DarahViewHol
     public void setUsers(ArrayList<User> fetched) {
         users.clear();
         users.addAll(fetched);
-        Log.d("BANGSAT", fetched.get(0).getName());
         notifyDataSetChanged();
     }
 

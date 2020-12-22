@@ -1,58 +1,36 @@
 package id.ac.uvers.donoryuk;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
-import id.ac.uvers.donoryuk.adapters.DarahAdapter;
-import id.ac.uvers.donoryuk.models.UsersResponse;
-import id.ac.uvers.donoryuk.network.ApiService;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.google.android.material.tabs.TabLayout;
 
 public class ReqDarahActivity extends AppCompatActivity {
 
-    private final ApiService service = new ApiService();
-    private DarahAdapter adapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
-    private RecyclerView rvUsers;
+    private DarahTabAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_req_darah);
 
-        adapter = new DarahAdapter();
-        fetch();
+        tabLayout = findViewById(R.id.darah_tab);
+        viewPager = findViewById(R.id.darah_view_pager);
 
-        rvUsers = findViewById(R.id.rv_users);
-        rvUsers.setHasFixedSize(true);
-        rvUsers.setLayoutManager(new LinearLayoutManager(this));
-        rvUsers.setAdapter(adapter);
+        tabLayout.addTab(tabLayout.newTab().setText("Bantuan"));
+        tabLayout.addTab(tabLayout.newTab().setText("Data Diri"));
+        tabLayout.setTabGravity(tabLayout.GRAVITY_FILL);
+
+        adapter = new DarahTabAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
     }
-
-    private void fetch() {
-        Call<UsersResponse> userCall = service.getService().fetch();
-        userCall.enqueue(new Callback<UsersResponse>() {
-            @Override
-            public void onResponse(@NonNull Call<UsersResponse> call, @NonNull Response<UsersResponse> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    adapter.setUsers(response.body().getUsers());
-                } else {
-                    Log.d("data", "gagal");
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<UsersResponse> call, @NonNull Throwable t) {
-                Log.d("data", "gagal");
-            }
-        });
-    }
-
 }
