@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DonorYuk">
-        <activity android:name=".req_darah"></activity>
+        <activity android:name=".edit_profile"></activity>
+        <activity android:name=".req_darah" />
         <activity android:name=".UserProfile" />
         <activity android:name=".AuthenticationActivity">
             <intent-filter>
