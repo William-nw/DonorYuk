@@ -21,6 +21,7 @@ allprojects {
 
 ext {
     retrofitVersion="2.9.0"
+    defaultTargetSdkVersion = 23
 }
 
 task clean(type: Delete) {
