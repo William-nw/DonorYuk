@@ -24,6 +24,9 @@ public class User {
     @SerializedName("no_hp")
     private String phone;
 
+    @SerializedName("gender")
+    private String gender;
+
     @SerializedName("status_donor")
     private String status;
 
@@ -91,5 +94,11 @@ public class User {
         this.status = status;
     }
 
+    public String getGender() {
+        return gender;
+    }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 }

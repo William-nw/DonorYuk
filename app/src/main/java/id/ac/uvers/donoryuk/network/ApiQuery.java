@@ -1,14 +1,17 @@
 package id.ac.uvers.donoryuk.network;
 
 import id.ac.uvers.donoryuk.models.UserResponse;
+import id.ac.uvers.donoryuk.models.UsersResponse;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiQuery {
 
-
+    @GET("WFSJoEPUTcI4WkX7x39OkUZ7sZSpzlTQ/fetch-user")
+    Call<UsersResponse> fetch();
 
     @FormUrlEncoded
     @POST("WFSJoEPUTcI4WkX7x39OkUZ7sZSpzlTQ/insert-user")

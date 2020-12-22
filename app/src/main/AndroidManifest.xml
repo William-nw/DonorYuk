@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DonorYuk">
         <activity android:name=".edit_profile"></activity>
-        <activity android:name=".req_darah" />
-        <activity android:name=".UserProfile" />
-        <activity android:name=".AuthenticationActivity">
+        <activity android:name=".ReqDarahActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".UserProfile" />
+        <activity android:name=".AuthenticationActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
 
