@@ -12,5 +12,6 @@
         android:layout_height="wrap_content"
         android:text="Registrasi"
         tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteY="163dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/nama"
+        android:id="@+id/edit_name_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -24,7 +24,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/edit_username_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -38,11 +38,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nama"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name_register"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/gender"
+        android:id="@+id/edit_gender_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/edit_username_register"
         app:layout_constraintWidth_percent=".8" />
 
 
@@ -69,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".09"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/edit_gender_register"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintWidth_percent=".8"
@@ -79,7 +79,7 @@
         >
 
         <EditText
-            android:id="@+id/gol_darah"
+            android:id="@+id/edit_blood_register"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
@@ -92,7 +92,7 @@
             />
 
         <EditText
-            android:id="@+id/rhesus"
+            android:id="@+id/edit_rhesus_register"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
@@ -105,7 +105,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/location"
+        android:id="@+id/edit_location_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -123,7 +123,7 @@
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/phone_num"
+        android:id="@+id/edit_phone_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -137,11 +137,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/edit_location_register"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/edit_pass_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text"
@@ -154,12 +154,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_num"
+        app:layout_constraintTop_toBottomOf="@+id/edit_phone_register"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintWidth_percent=".8" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
